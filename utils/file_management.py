@@ -35,7 +35,7 @@ def rows_quantity_in_file(filename):
 def split_file():
     total_rows=0
     suffix='.bak'
-    dfl_cmd="sed '1d' %s> %s; mv %s %s" % (TXT_SUNAT_RUC, TXT_SUNAT_RUC+'.bak', TXT_SUNAT_RUC+'.bak', TXT_SUNAT_RUC)
+    dfl_cmd="sed -i 1d %s" % (TXT_SUNAT_RUC)
     os.system(dfl_cmd)
     old_fn='prev_charset.txt'
     rnm_cmd='mv %s %s' % (TXT_SUNAT_RUC, old_fn)
@@ -54,7 +54,7 @@ def split_file():
     if OPERATIVE_SYSTEM=='mac':
         split_cmd='split -l %s %s %s' % (rows_per_file, TXT_SUNAT_RUC, TXT_SUNAT_RUC + '.')
     else:
-        split_cmd='cd %s & split -l %s --additional-suffix .txt -d %s %s' % (PATH_SUNAT_RUC, rows_per_file, TXT_SUNAT_RUC, TXT_SUNAT_RUC_FN)
+        split_cmd='split -l %s --additional-suffix .csv -d %s %s' % (rows_per_file, TXT_SUNAT_RUC, TXT_SUNAT_RUC)
         
     os.system(split_cmd)
     remove_file(TXT_SUNAT_RUC)
