@@ -1,0 +1,33 @@
+{
+    "env": "dev",
+    "dev": {
+        "os": "mac",
+        "mysql": {
+            "host": "wakanda-dev.chyd62oxixwd.us-west-2.rds.amazonaws.com",
+            "user": "admin",
+            "passwd": "mimol123",
+            "database": "aglaia_sunat",
+            "local_infile": 1
+        }
+    },
+    "pre_prod": {
+        "os": "linux",
+        "mysql": {
+            "host": "localhost",
+            "user": "root",
+            "passwd": "",
+            "database": "aglaia_sunat",
+            "local_infile": 1
+        }
+    },
+    "prod": {
+        "os": "linux",
+        "mysql": {
+            "host": "",
+            "user": "",
+            "passwd": "",
+            "database": "",
+            "local_infile": 1
+        }
+    }
+}
