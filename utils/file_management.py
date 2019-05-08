@@ -34,9 +34,8 @@ def rows_quantity_in_file(filename):
 
 def split_file():
     total_rows=0
-    suffix='.bak'
-    dfl_cmd="sed -i 1d %s" % (TXT_SUNAT_RUC)
-    os.system(dfl_cmd)
+    # dfl_cmd="sed -i 1d %s" % (TXT_SUNAT_RUC)
+    # os.system(dfl_cmd)
     old_fn='prev_charset.txt'
     rnm_cmd='mv %s %s' % (TXT_SUNAT_RUC, old_fn)
     os.system(rnm_cmd)

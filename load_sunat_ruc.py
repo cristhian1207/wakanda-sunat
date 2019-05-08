@@ -29,10 +29,14 @@ if __name__ == "__main__":
     
     se_old=sunat_table_dao.find_available()
 
-    for file in file_management.files_in_folder(PATH_SUNAT_RUC):
+    files=file_management.files_in_folder(PATH_SUNAT_RUC)
+    i=0
+    for file in files:
+        i+=1
         if file=='.DS_Store.txt':
             continue
         file_management.process_file(file, se)
+        logging.info('%s/%s'%(i, len(files)))
     
     setattr(se, 'locked', 0)
     setattr(se, 'rows', total_rows)
