@@ -1,7 +1,7 @@
 {
     "env": "dev",
     "dev": {
-        "os": "mac",
+        "os": "linux",
         "mysql": {
             "host": "wakanda-dev.chyd62oxixwd.us-west-2.rds.amazonaws.com",
             "user": "admin",
