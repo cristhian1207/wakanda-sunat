@@ -1,5 +1,5 @@
 {
-    "env": "dev",
+    "env": "pre_prod",
     "dev": {
         "os": "mac",
         "mysql": {
@@ -13,9 +13,9 @@
     "pre_prod": {
         "os": "linux",
         "mysql": {
-            "host": "localhost",
+            "host": "35.198.63.158",
             "user": "root",
-            "passwd": "",
+            "passwd": "mimol123",
             "database": "aglaia_sunat",
             "local_infile": 1
         }
