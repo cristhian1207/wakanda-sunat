@@ -1,10 +1,10 @@
 {
     "env": "dev",
     "dev": {
-        "os": "linux",
+        "os": "mac",
         "mysql": {
-            "host": "wakanda-dev.chyd62oxixwd.us-west-2.rds.amazonaws.com",
-            "user": "admin",
+            "host": "35.198.63.158",
+            "user": "root",
             "passwd": "mimol123",
             "database": "aglaia_sunat",
             "local_infile": 1
